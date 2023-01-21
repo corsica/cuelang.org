@@ -6,7 +6,7 @@ description = "How CUE integrates with the Go Programming Language."
 
 CUE is not specific to Go, or to cloud applications, but like many of
 new cloud technologies, CUE is written in Go. It has a rich set of APIs
-available to Go developers and interacts with CUE in various ways.
+available to Go developers and interacts with Go in various ways.
 
 ## The CUE APIs
 
