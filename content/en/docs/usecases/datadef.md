@@ -52,7 +52,7 @@ Consider the following versions of the same API:
 Declarations with a name starting with `#` are definitions.
 Definitions are not emitted when converting to data, for instance when
 exporting to JSON, and thus do not need to be concrete in such cases.
-Definitions assume the definition of closed structs, which means a user may
+Structs in Definitions are 'closed', which means a user may
 only use fields that are explicitly defined.
 
 In CUE, an API is backwards compatible if it subsumes the older one, or
@@ -142,8 +142,8 @@ As of 1.15, this requires a variant of OpenAPI called Structural OpenAPI.
 We will collectively refer to these as OpenAPI henceforth.
 
 OpenAPI does not have any expressions or references.
-They have powerful logical operators, though,
-that make them remarkably expressive.
+It has powerful logical operators, though,
+making it remarkably expressive.
 
 {{% alert color="info" title="On logical not" %}}
 OpenAPI defines a `not` operator.
