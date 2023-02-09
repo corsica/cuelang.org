@@ -279,9 +279,10 @@ The same operator can also be used to describe what are called "enums"
 in other languages, for instance, `1 | 2 | 3`.
 To CUE these two things—disjunctions of types and disjunctions of values—are the same thing.
 You can also mix types and values in a disjunction, as in `*1 | int`to define defaults (marked by `*`),
-and you can use expressions as well, like `*pet.species | "cat"`.
+and you can use complex values as well, like `*pet.species | "cat"`.
+<!-- remove the following, even when corrected it's not specific to complex values  -->
 The latter evaluates to the value of `pet.species`, or `"cat"` if
-`pet.species` is null; this is called null coalescing in some languages.
+`pet.species` doesn't match or is null; the latter is called null coalescing in some languages. 
 
 These various uses of `|` are not the result of operator overloading: they are
 all the same operation in CUE.
@@ -302,7 +303,7 @@ graph TD
 #### Structs
 
 Ordering of scalar types, like numbers and strings, is fairly straightforward
-and will feel familiar to anyone that has worked with a typed programming
+and will feel familiar to anyone who has worked with a typed programming
 language.
 But ordering structs might seem a bit unusual.
 
